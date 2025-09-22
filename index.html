@@ -41,6 +41,29 @@
       pointer-events: none;
     }
 
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 0, 0, 0.6);
+      border-radius: 50%;
+      animation: drift 12s infinite linear;
+    }
+
+    @keyframes drift {
+      to { transform: translateY(-100vh) translateX(20px); }
+    }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -75,20 +98,36 @@
       transform: translateZ(20px);
     }
 
+    .sparta-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin: 60px 0;
+      flex-wrap: wrap;
+    }
+
     .sparta-warrior {
-      width: 100%;
-      max-width: 600px;
+      flex: 1;
+      min-width: 300px;
       height: auto;
-      margin: 40px auto;
       border-radius: 12px;
       box-shadow: 0 0 50px rgba(255, 0, 0, 0.4), inset 0 0 30px rgba(212, 175, 55, 0.3);
       transform-style: preserve-3d;
       transform: rotateY(-5deg) translateZ(20px);
       transition: transform 0.5s ease;
+      cursor: pointer;
     }
 
     .sparta-warrior:hover {
       transform: rotateY(5deg) translateZ(40px) scale(1.02);
+    }
+
+    .sparta-left {
+      order: 1;
+    }
+
+    .sparta-right {
+      order: 2;
     }
 
     .info-section {
@@ -174,38 +213,19 @@
       50% { transform: translateY(-20px) rotateX(-2deg); }
     }
 
-    /* Partikel (debris perang) */
-    .particles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    .particle {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: rgba(255, 0, 0, 0.6);
-      border-radius: 50%;
-      animation: drift 12s infinite linear;
-    }
-
-    @keyframes drift {
-      to { transform: translateY(-100vh) translateX(20px); }
-    }
-
     /* Responsive */
     @media (max-width: 768px) {
-      h1 { font-size: 3rem; }
-      .sparta-warrior { width: 90%; }
-      .info-section { padding: 30px 20px; }
-      .tagline { font-size: 1.2rem; }
-      .icons-section { gap: 30px; }
-      .icon { font-size: 2.8rem; }
+      .sparta-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .sparta-warrior {
+        width: 100%;
+        max-width: 500px;
+      }
+      .sparta-left, .sparta-right {
+        order: 0;
+      }
     }
 
     @media (max-width: 480px) {
@@ -226,7 +246,13 @@
       <p class="subtitle">DIGITAL WARRIOR ⚔️</p>
     </header>
 
-    <img src="Whisk_ewn3kzylfdnxkdn10sy3ktotymmmrtlkhtnx0sn.jpeg" alt="Spartan Warrior on Horse" class="sparta-warrior">
+    <div class="sparta-container">
+      <!-- Gambar Sparta 1: Naik Kuda -->
+      <img src="Whisk_ewn3kzylfdnxkdn10sy3ktotymmmrtlkhtnx0sn.jpeg" alt="Spartan on Horse" class="sparta-warrior sparta-left">
+
+      <!-- Gambar Sparta 2: Berdiri (Ganti dengan gambar lain jika mau) -->
+      <img src="Whisk_ewn3kzylfdnxkdn10sy3ktotymmmrtlkhtnx0sn.jpeg" alt="Spartan Standing" class="sparta-warrior sparta-right">
+    </div>
 
     <div class="info-section">
       <h2>About Me</h2>
