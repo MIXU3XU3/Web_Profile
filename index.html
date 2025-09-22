@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MIXU3XU3 | Official Profile</title>
+  <title>MIXU3XU3 | Digital Warrior</title>
 
-  <!-- Font Awesome untuk ikon -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Favicon dari gambar Spartan (Base64) -->
-  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjOGQwMGZmIiBkPSJNMjU2IDQ4Yy0xMTQuNiAwLTIyNCA5OS40LTIyNCAyMjRzOTkuNCAyMjQgMjI0IDIyNCAyMjQtOTkuNCAyMjQtMjI0UzM3MC42IDQ4IDI1NiA0OHptMCA0MTZjLTk5LjUgMC0xODAgODAuNS0xODAgMTgwIDAgMjIgMTggNDAgNDAgNDBzMCAxOC00MCA0MGMtMjIgMC00MCAxOC00MCA0MHMyMCA0MCA0MCA0MGM5OS41IDAgMTgwLTgwLjUgMTgwLTE4MCAwLTIyLTE4LTQwLTQwLTQwczAtMTggNDAtNDBjMjIgMCA0MC0xOCA0MC00MHMtMjAtNDAtNDAtNDBjOTkuNSAwLTE4MCA4MC41LTE4MCAxODB6Ii8+PC9zdmc+" />
+  <!-- Favicon: Helm Sparta (SVG Base64) -->
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZjAwMDAwIiBkPSJNMjU2IDQ4Yy0xMTQuNiAwLTIyNCA5OS40LTIyNCAyMjRzOTkuNCAyMjQgMjI0IDIyNCAyMjQtOTkuNCAyMjQtMjI0UzM3MC42IDQ4IDI1NiA0OHptMCA0MTZjLTk5LjUgMC0xODAgODAuNS0xODAgMTgwIDAgMjIgMTggNDAgNDAgNDBzMCAxOC00MCA0MGMtMjIgMC00MCAxOC00MCA0MHMtMjAtNDAtNDAtNDBjOTkuNSAwLTE4MCA4MC41LTE4MCAxODB6Ii8+PC9zdmc+" />
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Slab:wght@400;700&display=swap');
 
     * {
       margin: 0;
@@ -21,17 +21,32 @@
     }
 
     body {
-      background: linear-gradient(135deg, #1a0033, #2d0052, #1a0033);
-      color: #e0e0ff;
-      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(135deg, #111, #330000, #000);
+      color: #f0e0d0;
+      font-family: 'Roboto Slab', serif;
       overflow-x: hidden;
       perspective: 1000px;
+      position: relative;
+    }
+
+    /* Efek sinar dari kanan */
+    .sunbeam {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 100% 20%, rgba(255, 215, 0, 0.3), transparent 70%);
+      z-index: -1;
+      pointer-events: none;
     }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 40px 20px;
+      position: relative;
+      z-index: 1;
     }
 
     header {
@@ -44,48 +59,47 @@
     h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 5rem;
-      font-weight: 900;
-      background: linear-gradient(to right, #b366ff, #8000ff, #4d0099);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 0 0 20px rgba(179, 102, 255, 0.6);
+      font-weight: 700;
+      color: #d4af37;
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.5);
       letter-spacing: 4px;
       transform: translateZ(30px);
       margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
     .subtitle {
       font-size: 1.3rem;
-      color: #c0a0ff;
+      color: #ff3333;
       letter-spacing: 2px;
       transform: translateZ(20px);
     }
 
     .sparta-warrior {
-      width: 300px;
+      width: 100%;
+      max-width: 600px;
       height: auto;
       margin: 40px auto;
       border-radius: 12px;
-      box-shadow: 0 0 40px rgba(128, 0, 255, 0.4);
+      box-shadow: 0 0 50px rgba(255, 0, 0, 0.4), inset 0 0 30px rgba(212, 175, 55, 0.3);
       transform-style: preserve-3d;
-      transform: rotateY(-10deg) rotateX(5deg) translateZ(20px);
+      transform: rotateY(-5deg) translateZ(20px);
       transition: transform 0.5s ease;
     }
 
     .sparta-warrior:hover {
-      transform: rotateY(10deg) rotateX(-5deg) translateZ(40px) scale(1.05);
+      transform: rotateY(5deg) translateZ(40px) scale(1.02);
     }
 
     .info-section {
-      background: rgba(20, 0, 40, 0.7);
+      background: rgba(10, 0, 0, 0.8);
       backdrop-filter: blur(10px);
       border-radius: 20px;
       padding: 40px;
       margin: 60px auto;
       max-width: 800px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(128, 0, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.2);
+      border: 1px solid rgba(212, 175, 55, 0.3);
       transform-style: preserve-3d;
       transform: translateZ(10px);
     }
@@ -94,21 +108,22 @@
       font-family: 'Orbitron', sans-serif;
       font-size: 2.2rem;
       margin-bottom: 25px;
-      color: #d0b0ff;
+      color: #d4af37;
       text-align: center;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
     }
 
     .tagline {
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'Roboto Slab', serif;
       font-size: 1.4rem;
       text-align: center;
       line-height: 1.7;
-      color: #f0d0ff;
+      color: #fff;
       font-weight: 600;
       margin: 40px 0;
       padding: 20px;
-      border-left: 4px solid #b366ff;
-      background: rgba(80, 0, 160, 0.2);
+      border-left: 4px solid #d4af37;
+      background: rgba(255, 0, 0, 0.1);
       border-radius: 0 12px 12px 0;
       transform: translateZ(5px);
     }
@@ -134,32 +149,32 @@
 
     .icon {
       font-size: 3.5rem;
-      color: #b366ff;
+      color: #d4af37;
       margin-bottom: 15px;
-      text-shadow: 0 0 20px rgba(179, 102, 255, 0.5);
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
     }
 
     .icon-title {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.2rem;
-      color: #e0c0ff;
+      color: #ff3333;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      color: #8060aa;
+      color: #d4af37;
       font-size: 0.9rem;
       margin-top: 50px;
     }
 
-    /* Animasi 3D Float */
+    /* Animasi Float */
     @keyframes float {
       0%, 100% { transform: translateY(0px) rotateX(2deg); }
       50% { transform: translateY(-20px) rotateX(-2deg); }
     }
 
-    /* Efek partikel kecil */
+    /* Partikel (debris perang) */
     .particles {
       position: fixed;
       top: 0;
@@ -172,21 +187,21 @@
 
     .particle {
       position: absolute;
-      width: 4px;
-      height: 4px;
-      background: rgba(179, 102, 255, 0.6);
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 0, 0, 0.6);
       border-radius: 50%;
-      animation: drift 15s infinite linear;
+      animation: drift 12s infinite linear;
     }
 
     @keyframes drift {
-      to { transform: translateY(-100vh) translateX(50px); }
+      to { transform: translateY(-100vh) translateX(20px); }
     }
 
     /* Responsive */
     @media (max-width: 768px) {
       h1 { font-size: 3rem; }
-      .sparta-warrior { width: 250px; }
+      .sparta-warrior { width: 90%; }
       .info-section { padding: 30px 20px; }
       .tagline { font-size: 1.2rem; }
       .icons-section { gap: 30px; }
@@ -202,34 +217,33 @@
   </style>
 </head>
 <body>
+  <div class="sunbeam"></div>
   <div class="particles" id="particles"></div>
 
   <div class="container">
     <header>
       <h1>MIXU3XU3</h1>
-      <p class="subtitle">WARRIOR OF THE DIGITAL ARENA ⚔️</p>
+      <p class="subtitle">DIGITAL WARRIOR ⚔️</p>
     </header>
 
-    <img src="https://i.imgur.com/6YrVjqD.jpg" alt="Spartan Warrior" class="sparta-warrior">
+    <img src="https://i.imgur.com/6YrVjqD.jpg" alt="Spartan Warrior on Horse" class="sparta-warrior">
 
     <div class="info-section">
-      <h2>ABOUT ME</h2>
+      <h2>About Me</h2>
       <p style="text-align: center; line-height: 1.8; font-size: 1.1rem;">
         I am MIXU3XU3 — a digital gladiator forged in the fires of creativity and code. 
         Blending ancient warrior spirit with futuristic aesthetics, I conquer challenges 
-        with style, power, and a touch of purple elegance.
+        with style, power, and unshakable resolve.
       </p>
 
-      <!-- Kutipan baru -->
       <div class="tagline">
         “Langkah kecil hari ini, bukit besar besok.<br>
         Tuhan meridhoi, gua berdiri di puncak.”
       </div>
 
-      <!-- Ikon Trade X Code X Digital -->
       <div class="icons-section">
         <div class="icon-box">
-          <div class="icon"><i class="fas fa-chart-line"></i></div>
+          <div class="icon"><i class="fas fa-sword"></i></div>
           <div class="icon-title">TRADE</div>
         </div>
         <div class="icon-box">
@@ -245,19 +259,18 @@
   </div>
 
   <footer>
-    &copy; 2025 MIXU3XU3 — Crafted in the Shadows of Elegance. All Rights Reserved.
+    &copy; 2025 MIXU3XU3 — Forged in Fire, Ruled by Will.
   </footer>
 
   <script>
-    // Generate floating particles for 3D space effect
     const particlesContainer = document.getElementById('particles');
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 40; i++) {
       const particle = document.createElement('div');
       particle.classList.add('particle');
       particle.style.left = Math.random() * 100 + 'vw';
       particle.style.top = Math.random() * 100 + 'vh';
-      particle.style.animationDuration = (10 + Math.random() * 20) + 's';
-      particle.style.opacity = Math.random() * 0.7 + 0.3;
+      particle.style.animationDuration = (10 + Math.random() * 15) + 's';
+      particle.style.opacity = Math.random() * 0.8 + 0.2;
       particlesContainer.appendChild(particle);
     }
   </script>
