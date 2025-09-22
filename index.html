@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIXU3XU3 | Official Profile</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1a0033, #2d0052, #1a0033);
+      color: #e0e0ff;
+      font-family: 'Rajdhani', sans-serif;
+      overflow-x: hidden;
+      perspective: 1000px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 0;
+      transform-style: preserve-3d;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 5rem;
+      font-weight: 900;
+      background: linear-gradient(to right, #b366ff, #8000ff, #4d0099);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 20px rgba(179, 102, 255, 0.6);
+      letter-spacing: 4px;
+      transform: translateZ(30px);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      color: #c0a0ff;
+      letter-spacing: 2px;
+      transform: translateZ(20px);
+    }
+
+    .sparta-warrior {
+      width: 300px;
+      height: auto;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 40px rgba(128, 0, 255, 0.4);
+      transform-style: preserve-3d;
+      transform: rotateY(-10deg) rotateX(5deg) translateZ(20px);
+      transition: transform 0.5s ease;
+    }
+
+    .sparta-warrior:hover {
+      transform: rotateY(10deg) rotateX(-5deg) translateZ(40px) scale(1.05);
+    }
+
+    .info-section {
+      background: rgba(20, 0, 40, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      margin: 60px auto;
+      max-width: 800px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(128, 0, 255, 0.3);
+      transform-style: preserve-3d;
+      transform: translateZ(10px);
+    }
+
+    .info-section h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: #d0b0ff;
+      text-align: center;
+    }
+
+    .socials {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .ig-link {
+      display: inline-block;
+      background: linear-gradient(45deg, #8000ff, #b366ff);
+      color: white;
+      padding: 15px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      box-shadow: 0 5px 20px rgba(128, 0, 255, 0.5);
+      transition: all 0.3s ease;
+      transform: translateZ(10px);
+    }
+
+    .ig-link:hover {
+      transform: translateY(-5px) translateZ(15px);
+      box-shadow: 0 10px 30px rgba(179, 102, 255, 0.7);
+      background: linear-gradient(45deg, #b366ff, #8000ff);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #8060aa;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    /* Animasi 3D Float */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotateX(2deg); }
+      50% { transform: translateY(-20px) rotateX(-2deg); }
+    }
+
+    /* Efek partikel kecil (opsional) */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(179, 102, 255, 0.6);
+      border-radius: 50%;
+      animation: drift 15s infinite linear;
+    }
+
+    @keyframes drift {
+      to { transform: translateY(-100vh) translateX(50px); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 3rem; }
+      .sparta-warrior { width: 250px; }
+      .info-section { padding: 30px 20px; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2.5rem; }
+      .subtitle { font-size: 1rem; }
+      .ig-link { padding: 12px 25px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="particles" id="particles"></div>
+
+  <div class="container">
+    <header>
+      <h1>MIXU3XU3</h1>
+      <p class="subtitle">WARRIOR OF THE DIGITAL ARENA ⚔️</p>
+    </header>
+
+    <img src="https://i.imgur.com/6YrVjqD.jpg" alt="Spartan Warrior" class="sparta-warrior">
+
+    <div class="info-section">
+      <h2>ABOUT ME</h2>
+      <p style="text-align: center; line-height: 1.8; font-size: 1.1rem;">
+        I am MIXU3XU3 — a digital gladiator forged in the fires of creativity and code. 
+        Blending ancient warrior spirit with futuristic aesthetics, I conquer challenges 
+        with style, power, and a touch of purple elegance.
+      </p>
+
+      <div class="socials">
+        <a href="https://instagram.com/mixu3xu3" target="_blank" class="ig-link">
+          FOLLOW ON INSTAGRAM ➜ @mixu3xu3
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 MIXU3XU3 — Crafted in the Shadows of Elegance. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Generate floating particles for 3D space effect
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.top = Math.random() * 100 + 'vh';
+      particle.style.animationDuration = (10 + Math.random() * 20) + 's';
+      particle.style.opacity = Math.random() * 0.7 + 0.3;
+      particlesContainer.appendChild(particle);
+    }
+  </script>
+</body>
+</html>
